@@ -19,8 +19,13 @@ class AviationDualTimeApp extends Application.AppBase {
 
     function initialize() {
         AppBase.initialize();
+        onSettingsChanged();
     }
 
+    // onStart() is called on application start up
+    function onStart(state as Dictionary?) as Void {
+        onSettingsChanged();
+    }
 
     // Return the initial view of your application here
     function getInitialView() as Array<Views or InputDelegates>? {
