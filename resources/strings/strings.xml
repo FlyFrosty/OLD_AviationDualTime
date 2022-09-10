@@ -47,6 +47,13 @@
     <string id="ZuluTitle">Zulu Adjustment</string>
     <string id="zuluLabel">zuluLabel</string>
 
+    <string id="stepGroupTitle">Steps or Zulu Time</string>
+    <string id="ZTime">Zulu Time</string>
+    <string id="ZSteps">Steps</string>
+
+    <string id="TimeStepTitle">Zulu Time or Steps</string>
+    <string id="TimeStepPrompt">Zulu Time or Steps</string>
+
     <string id="Z1">-12+00 </string>
     <string id="Z2">-11+00 </string>
     <string id="Z3">-10+30 </string>
