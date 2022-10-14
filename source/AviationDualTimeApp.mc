@@ -10,6 +10,7 @@ import Toybox.Graphics;
     var subColorSet = Graphics.COLOR_LT_GRAY;
     var myBackgroundColor = 0x000000;
     var offSetAmmt = 130;
+    var timeOrStep;
 
 class AviationDualTimeApp extends Application.AppBase {
 
@@ -41,6 +42,7 @@ class AviationDualTimeApp extends Application.AppBase {
         subColorNum = Properties.getValue("SubColor");
         showBat = Properties.getValue("DispBatt");
         myBackgroundColor = Properties.getValue("BackgroundColor");
+        timeOrStep = Properties.getValue("TimeStep");
 
         colorUpdate();  //Apply the changes
         WatchUi.requestUpdate();
@@ -102,12 +104,10 @@ class AviationDualTimeApp extends Application.AppBase {
                     subColorSet = Graphics.COLOR_WHITE;
                 }
 
-            //Show the battery or not
-            showBat = Properties.getValue("DispBatt");
-
-            //Get the Zulu Hours offset ammount
-            offSetAmmt = Properties.getValue("ZuluOffset");
-        
+            if (timeOrStep) {
+                //Get the Zulu Hours offset ammount
+                offSetAmmt = Properties.getValue("ZuluOffset");
+            }
         }
 
 }

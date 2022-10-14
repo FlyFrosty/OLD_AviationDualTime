@@ -33,6 +33,7 @@ class AviationDualTimeView extends Ui.WatchFace {
         stepDisplay = View.findDrawableById("stepLabel");
         noteDisplay = View.findDrawableById("noteLabel");
         alarmDisplay = View.findDrawableById("alarmLabel");
+
     }
 
     // Update the view
@@ -90,71 +91,99 @@ class AviationDualTimeView extends Ui.WatchFace {
         //Draw Zulu Time Offset
         function drawZTime() {
 
-            var zTime = Greg.utcInfo(Time.now(), Time.FORMAT_MEDIUM);
-            var myOffset = zTime.hour;
-            var minOffset = zTime.min;
-
-            //Prep the label
-            var myParams;
-            var myFormat = "Set $1$+$2$";
-
-            if (offSetAmmt % 10 != 0) {
-                if ((offSetAmmt - 130) < 0) {
-                    myParams = [((offSetAmmt / 10) - 12), (offSetAmmt % 10 * 6)];
-                } else {
-                    myParams = [((offSetAmmt / 10) - 13), (offSetAmmt % 10 * 6)];
-                }
-            } else {
-                myParams = [((offSetAmmt / 10) - 13), "00"];
-            }
-
-            var myZuluLabel = Lang.format(myFormat,myParams);
-
-            //Offset to add or subtract
-            //Capture a partial hour and convert to seconds
-            var convLeftoverOffset = (offSetAmmt % 10) * 360;
-
-            //Convert the hours to seconds
-            var convToOffset = ((offSetAmmt / 10) - 13) * 3600;
-
-            convToOffset = convToOffset + convLeftoverOffset;
+            //If ZUlu Offset is selected instead of Steps
+            if (timeOrStep){
+                var zTime = Greg.utcInfo(Time.now(), Time.FORMAT_MEDIUM);
+                var myOffset = zTime.hour;
+                var minOffset = zTime.min;
+                var zuluTime;
+                var myZuluLabel;
             
-            //Convert Zulu time to seconds
-            var zuluToSecs =  (minOffset * 60) + (myOffset * 3600);
+                //Clear any leftover steps
+                stepDisplay.setColor(Graphics.COLOR_TRANSPARENT);                
 
-            //Combine the offset with the current zulu
-            var convToSecs = convToOffset + zuluToSecs;
+                //Big if statement for formatting.  If Zulu time, do the else part
+                if (offSetAmmt != 130) {
+                   //Prep the label
+                        var myParams;
+                        var myFormat = "Set $1$+$2$";
 
-            if (convToOffset + zuluToSecs < 0) {
-                myOffset = ((86400 + convToOffset + zuluToSecs) - ((86400 + convToOffset + zuluToSecs)%3600)) / 3600;
+                        if (offSetAmmt % 10 != 0) {
+                            if ((offSetAmmt - 130) < 0) {
+                                myParams = [((offSetAmmt / 10) - 12), (offSetAmmt % 10 * 6)];
+                            } else {
+                                myParams = [((offSetAmmt / 10) - 13), (offSetAmmt % 10 * 6)];
+                            }
+                        } else {
+                            myParams = [((offSetAmmt / 10) - 13), "00"];
+                        }
+                        myZuluLabel = Lang.format(myFormat,myParams);
+
+                    //Offset to add or subtract
+                    var convLeftoverOffset = (offSetAmmt % 10) * 360;     //Convert any partial hour part to seconds
+                    var convToOffset = ((offSetAmmt / 10) - 13) * 3600;    //Convert the hours part to seconds
+
+                    convToOffset = convToOffset + convLeftoverOffset; //Total Offset in seconds
+            
+                    //Convert Zulu time to seconds
+                    var zuluToSecs =  (minOffset * 60) + (myOffset * 3600);
+
+                    //Combine the offset with the current zulu
+                    var convToSecs = convToOffset + zuluToSecs;
+
+                    //Keep the new offset time positive (no negative time)
+                    if (convToSecs <= 86400) {
+                        myOffset = ((86400 + convToSecs) - ((86400 + convToSecs)%3600)) / 3600;
+                    } else {
+                        myOffset = ((convToSecs) - ((86400 + convToSecs)%3600)) / 3600;
+                    }
+
+                    //Adjust mins and hours for clock rollovers due to add or sub 30 min
+                    minOffset = (convToSecs % 3600) / 60;
+
+                    if (minOffset < 0) {
+                        minOffset = minOffset + 60;
+                   }   
+
+                    //correct for hours within the 24 hour clock
+                    if (myOffset == 24) {
+                        myOffset = 0;
+                    } else if (myOffset < 0) {
+                        myOffset = myOffset + 24;
+                    } else if (myOffset >= 24) {
+                        myOffset = myOffset - 24;
+                    }
+
+                    zuluTime = Lang.format("$1$:$2$", [myOffset.format("%02d"), minOffset.format("%02d")]);    
+                } else {
+                    zuluTime = Lang.format("$1$:$2$", [zTime.hour.format("%02d"), zTime.min.format("%02d")])+"Z";
+                    myZuluLabel = " ";
+                }
+
+                //Display Zulu
+                zView.setColor(subColorSet);
+                zView.setText(zuluTime);
+
+                //Display Zulu Label
+                zLabel.setColor(subColorSet);
+                zLabel.setText(myZuluLabel);
+
             } else {
-                myOffset = ((convToOffset + zuluToSecs) - ((86400 + convToOffset + zuluToSecs)%3600)) / 3600;
+                //Format Steps
+                var stepLoad = ActivityMonitor.getInfo();
+                var steps = stepLoad.steps;
+                var stepString = Lang.format("$1$", [steps]);
+
+                //clear Zulu time text and dipslay Steps
+                zView.setColor(Graphics.COLOR_TRANSPARENT);
+
+                stepDisplay.setColor(subColorSet);
+                stepDisplay.setText(stepString);
+                
+                //Display Zulu Label
+                zLabel.setColor(subColorSet);
+                zLabel.setText("Steps");
             }
-
-            //Adjust mins and hours for clock rollovers due to add or sub 30 min
-            minOffset = (convToSecs % 3600) / 60;
-
-            if (minOffset < 0) {
-                minOffset = minOffset + 60;
-                myOffset = myOffset - 1;
-            } else if (minOffset > 59) {
-                minOffset = minOffset - 60;
-                myOffset = myOffset + 1;
-            }
-
-            //correct for hours within the 24 hour clock
-            if (myOffset >= 24) {myOffset = myOffset - 24;}
-            if (myOffset < 0) {myOffset = myOffset + 24;}
-
-            var zuluTime = Lang.format("$1$:$2$", [myOffset.format("%02d"), minOffset.format("%02d")])+"Z";    
-
-            //Display Zulu
-            zView.setColor(subColorSet);
-            zView.setText(zuluTime);
-
-            //Display Zulu Label
-            zLabel.setColor(subColorSet);
-            zLabel.setText(myZuluLabel);
 
         }
 
