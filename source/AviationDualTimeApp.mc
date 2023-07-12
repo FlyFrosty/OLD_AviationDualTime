@@ -1,5 +1,5 @@
 import Toybox.Application;
-import Toybox.Lang;
+import Toybox.Lang;                 //Get rid of this for next release
 import Toybox.WatchUi;
 import Toybox.Graphics;
 
@@ -102,6 +102,14 @@ class AviationDualTimeApp extends Application.AppBase {
                     subColorSet = Graphics.COLOR_BLACK;
                 } else if (subColorNum == 3) {
                     subColorSet = Graphics.COLOR_WHITE;
+                } else if (subColorNum == 4) {
+                    subColorSet = Graphics.COLOR_RED;
+                } else if (subColorNum == 5) {
+                    subColorSet = Graphics.COLOR_GREEN;
+                } else if (subColorNum == 6) {
+                    subColorSet = Graphics.COLOR_BLUE;
+                } else if (subColorNum == 7) {
+                    subColorSet = Graphics.COLOR_PINK;
                 }
 
             if (timeOrStep) {
