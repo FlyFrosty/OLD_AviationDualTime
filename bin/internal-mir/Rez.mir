@@ -1,0 +1,620 @@
+[ @file = "/Users/jeffreyforste/Garmin Projects/AviationDualTime/bin/gen/006-B3740-00/source/Rez.mcgen"; @line = 1; ]
+import Toybox.Lang;
+[ @file = "/Users/jeffreyforste/Garmin Projects/AviationDualTime/bin/gen/006-B3740-00/source/Rez.mcgen"; @line = 2; ]
+using Toybox.WatchUi;
+[ @file = "/Users/jeffreyforste/Garmin Projects/AviationDualTime/bin/gen/006-B3740-00/source/Rez.mcgen"; @line = 3; ]
+using Toybox.WatchUi as :Ui;
+[ @file = "/Users/jeffreyforste/Garmin Projects/AviationDualTime/bin/gen/006-B3740-00/source/Rez.mcgen"; @line = 4; ]
+using Toybox.Graphics;
+[ @file = "/Users/jeffreyforste/Garmin Projects/AviationDualTime/bin/gen/006-B3740-00/source/Rez.mcgen"; @line = 5; ]
+using Toybox.Graphics as :Gfx;
+[ @file = "/Users/jeffreyforste/Garmin Projects/AviationDualTime/bin/gen/006-B3740-00/source/Rez.mcgen"; @line = 7; ]
+module Rez {
+    [ @file = "/Users/jeffreyforste/Garmin Projects/AviationDualTime/bin/gen/006-B3740-00/source/Rez.mcgen"; @line = 7; ]
+    <init> {
+    }
+    [ @file = "/Users/jeffreyforste/Garmin Projects/AviationDualTime/bin/gen/006-B3740-00/source/Rez.mcgen"; @line = 8; ]
+    module Drawables {
+        [ @file = "/Users/jeffreyforste/Garmin Projects/AviationDualTime/bin/gen/006-B3740-00/source/Rez.mcgen"; @line = 8; ]
+        <init> {
+        }
+        [ @file = "/Users/jeffreyforste/Garmin Projects/AviationDualTime/bin/gen/006-B3740-00/source/Rez.mcgen"; @line = 9; @position = 27; initialized = true; ]
+        var LauncherIcon as Symbol;
+    }
+    [ @file = "/Users/jeffreyforste/Garmin Projects/AviationDualTime/bin/gen/006-B3740-00/source/Rez.mcgen"; @line = 12; ]
+    module Fonts {
+        [ @file = "/Users/jeffreyforste/Garmin Projects/AviationDualTime/bin/gen/006-B3740-00/source/Rez.mcgen"; @line = 12; ]
+        <init> {
+        }
+    }
+    [ @file = "/Users/jeffreyforste/Garmin Projects/AviationDualTime/bin/gen/006-B3740-00/source/Rez.mcgen"; @line = 15; ]
+    module JsonData {
+        [ @file = "/Users/jeffreyforste/Garmin Projects/AviationDualTime/bin/gen/006-B3740-00/source/Rez.mcgen"; @line = 15; ]
+        <init> {
+        }
+    }
+    [ @file = "/Users/jeffreyforste/Garmin Projects/AviationDualTime/bin/gen/006-B3740-00/source/Rez.mcgen"; @line = 18; ]
+    module Layouts {
+        [ @file = "/Users/jeffreyforste/Garmin Projects/AviationDualTime/bin/gen/006-B3740-00/source/Rez.mcgen"; @line = 18; ]
+        <init> {
+        }
+        [ @file = "/Users/jeffreyforste/Garmin Projects/AviationDualTime/bin/gen/006-B3740-00/source/Rez.mcgen"; @line = 19; ]
+        function WatchFace(dc as Graphics.Dc) as Array<WatchUi.Drawable> {
+_Users_jeffreyforste_Garmin_Projects_AviationDualTime_bin_gen_006_B3740_00_source_Rez_mcgen_19_73_start:
+[ "/Users/jeffreyforste/Garmin Projects/AviationDualTime/bin/gen/006-B3740-00/source/Rez.mcgen" 20 12 ]
+            [ "_Users_jeffreyforste_Garmin_Projects_AviationDualTime_bin_gen_006_B3740_00_source_Rez_mcgen_19_73_start" "_Users_jeffreyforste_Garmin_Projects_AviationDualTime_bin_gen_006_B3740_00_source_Rez_mcgen_19_73_stop" ]
+            %rez_cmp_local_custom_drawable_65580613402996281113.1 = local;
+            %tmp.4 = getv ? :Background;
+            %tmp.1 = newc %tmp.4 ();
+            lputv %rez_cmp_local_custom_drawable_65580613402996281113.1 %tmp.1;
+[ "/Users/jeffreyforste/Garmin Projects/AviationDualTime/bin/gen/006-B3740-00/source/Rez.mcgen" 22 12 ]
+            [ "_Users_jeffreyforste_Garmin_Projects_AviationDualTime_bin_gen_006_B3740_00_source_Rez_mcgen_19_73_start" "_Users_jeffreyforste_Garmin_Projects_AviationDualTime_bin_gen_006_B3740_00_source_Rez_mcgen_19_73_stop" ]
+            %rez_cmp_local_text_TimeLabelRShad.2 = local;
+            %tmp.7 = getm $.Toybox.WatchUi;
+            %tmp.8 = getv function ? %tmp.7 :Text;
+            %tmp.9 = newd 6;
+            %tmp.11 = const :identifier;
+            %tmp.12 = "TimeLabelRShad";
+            %tmp.13 = dup %tmp.9;
+            %tmp.14 = aputv %tmp.13 %tmp.11 %tmp.12;
+            %tmp.16 = const :color;
+            %tmp.17 = getm $.Toybox.Graphics;
+            %tmp.18 = getv %tmp.17 :COLOR_WHITE;
+            %tmp.19 = dup %tmp.14;
+            %tmp.20 = aputv %tmp.19 %tmp.16 %tmp.18;
+            %tmp.22 = const :locX;
+            %tmp.23 = 390;
+            %tmp.24 = 51;
+            %tmp.25 = 100.0;
+            %tmp.26 = div %tmp.24 %tmp.25;
+            %tmp.27 = mul %tmp.23 %tmp.26;
+            %tmp.28 = dup %tmp.20;
+            %tmp.29 = aputv %tmp.28 %tmp.22 %tmp.27;
+            %tmp.31 = const :locY;
+            %tmp.32 = 390;
+            %tmp.33 = 15;
+            %tmp.34 = 100.0;
+            %tmp.35 = div %tmp.33 %tmp.34;
+            %tmp.36 = mul %tmp.32 %tmp.35;
+            %tmp.37 = dup %tmp.29;
+            %tmp.38 = aputv %tmp.37 %tmp.31 %tmp.36;
+            %tmp.40 = const :justification;
+            %tmp.41 = getm $.Toybox.Graphics;
+            %tmp.42 = getv %tmp.41 :TEXT_JUSTIFY_CENTER;
+            %tmp.43 = dup %tmp.38;
+            %tmp.44 = aputv %tmp.43 %tmp.40 %tmp.42;
+            %tmp.46 = const :font;
+            %tmp.47 = getm $.Toybox.Graphics;
+            %tmp.48 = getv %tmp.47 :FONT_NUMBER_THAI_HOT;
+            %tmp.49 = dup %tmp.44;
+            %tmp.50 = aputv %tmp.49 %tmp.46 %tmp.48;
+            %tmp.5 = newc %tmp.8 (%tmp.50);
+            lputv %rez_cmp_local_text_TimeLabelRShad.2 %tmp.5;
+[ "/Users/jeffreyforste/Garmin Projects/AviationDualTime/bin/gen/006-B3740-00/source/Rez.mcgen" 24 12 ]
+            [ "_Users_jeffreyforste_Garmin_Projects_AviationDualTime_bin_gen_006_B3740_00_source_Rez_mcgen_19_73_start" "_Users_jeffreyforste_Garmin_Projects_AviationDualTime_bin_gen_006_B3740_00_source_Rez_mcgen_19_73_stop" ]
+            %rez_cmp_local_text_TimeLabel.3 = local;
+            %tmp.53 = getm $.Toybox.WatchUi;
+            %tmp.54 = getv function ? %tmp.53 :Text;
+            %tmp.55 = newd 6;
+            %tmp.57 = const :identifier;
+            %tmp.58 = "TimeLabel";
+            %tmp.59 = dup %tmp.55;
+            %tmp.60 = aputv %tmp.59 %tmp.57 %tmp.58;
+            %tmp.62 = const :color;
+            %tmp.63 = getm $.Toybox.Graphics;
+            %tmp.64 = getv %tmp.63 :COLOR_BLACK;
+            %tmp.65 = dup %tmp.60;
+            %tmp.66 = aputv %tmp.65 %tmp.62 %tmp.64;
+            %tmp.68 = const :locX;
+            %tmp.69 = 390;
+            %tmp.70 = 0.5;
+            %tmp.71 = mul %tmp.69 %tmp.70;
+            %tmp.72 = dup %tmp.66;
+            %tmp.73 = aputv %tmp.72 %tmp.68 %tmp.71;
+            %tmp.75 = const :locY;
+            %tmp.76 = 390;
+            %tmp.77 = 15;
+            %tmp.78 = 100.0;
+            %tmp.79 = div %tmp.77 %tmp.78;
+            %tmp.80 = mul %tmp.76 %tmp.79;
+            %tmp.81 = dup %tmp.73;
+            %tmp.82 = aputv %tmp.81 %tmp.75 %tmp.80;
+            %tmp.84 = const :justification;
+            %tmp.85 = getm $.Toybox.Graphics;
+            %tmp.86 = getv %tmp.85 :TEXT_JUSTIFY_CENTER;
+            %tmp.87 = dup %tmp.82;
+            %tmp.88 = aputv %tmp.87 %tmp.84 %tmp.86;
+            %tmp.90 = const :font;
+            %tmp.91 = getm $.Toybox.Graphics;
+            %tmp.92 = getv %tmp.91 :FONT_NUMBER_THAI_HOT;
+            %tmp.93 = dup %tmp.88;
+            %tmp.94 = aputv %tmp.93 %tmp.90 %tmp.92;
+            %tmp.51 = newc %tmp.54 (%tmp.94);
+            lputv %rez_cmp_local_text_TimeLabel.3 %tmp.51;
+[ "/Users/jeffreyforste/Garmin Projects/AviationDualTime/bin/gen/006-B3740-00/source/Rez.mcgen" 26 12 ]
+            [ "_Users_jeffreyforste_Garmin_Projects_AviationDualTime_bin_gen_006_B3740_00_source_Rez_mcgen_19_73_start" "_Users_jeffreyforste_Garmin_Projects_AviationDualTime_bin_gen_006_B3740_00_source_Rez_mcgen_19_73_stop" ]
+            %rez_cmp_local_text_zTimeLabel.4 = local;
+            %tmp.97 = getm $.Toybox.WatchUi;
+            %tmp.98 = getv function ? %tmp.97 :Text;
+            %tmp.99 = newd 6;
+            %tmp.101 = const :identifier;
+            %tmp.102 = "zTimeLabel";
+            %tmp.103 = dup %tmp.99;
+            %tmp.104 = aputv %tmp.103 %tmp.101 %tmp.102;
+            %tmp.106 = const :color;
+            %tmp.107 = getm $.Toybox.Graphics;
+            %tmp.108 = getv %tmp.107 :COLOR_LT_GRAY;
+            %tmp.109 = dup %tmp.104;
+            %tmp.110 = aputv %tmp.109 %tmp.106 %tmp.108;
+            %tmp.112 = const :locX;
+            %tmp.113 = 390;
+            %tmp.114 = 0.5;
+            %tmp.115 = mul %tmp.113 %tmp.114;
+            %tmp.116 = dup %tmp.110;
+            %tmp.117 = aputv %tmp.116 %tmp.112 %tmp.115;
+            %tmp.119 = const :locY;
+            %tmp.120 = 390;
+            %tmp.121 = 72;
+            %tmp.122 = 100.0;
+            %tmp.123 = div %tmp.121 %tmp.122;
+            %tmp.124 = mul %tmp.120 %tmp.123;
+            %tmp.125 = dup %tmp.117;
+            %tmp.126 = aputv %tmp.125 %tmp.119 %tmp.124;
+            %tmp.128 = const :justification;
+            %tmp.129 = getm $.Toybox.Graphics;
+            %tmp.130 = getv %tmp.129 :TEXT_JUSTIFY_CENTER;
+            %tmp.131 = dup %tmp.126;
+            %tmp.132 = aputv %tmp.131 %tmp.128 %tmp.130;
+            %tmp.134 = const :font;
+            %tmp.135 = getm $.Toybox.Graphics;
+            %tmp.136 = getv %tmp.135 :FONT_LARGE;
+            %tmp.137 = dup %tmp.132;
+            %tmp.138 = aputv %tmp.137 %tmp.134 %tmp.136;
+            %tmp.95 = newc %tmp.98 (%tmp.138);
+            lputv %rez_cmp_local_text_zTimeLabel.4 %tmp.95;
+[ "/Users/jeffreyforste/Garmin Projects/AviationDualTime/bin/gen/006-B3740-00/source/Rez.mcgen" 28 12 ]
+            [ "_Users_jeffreyforste_Garmin_Projects_AviationDualTime_bin_gen_006_B3740_00_source_Rez_mcgen_19_73_start" "_Users_jeffreyforste_Garmin_Projects_AviationDualTime_bin_gen_006_B3740_00_source_Rez_mcgen_19_73_stop" ]
+            %rez_cmp_local_text_zuluLabel.5 = local;
+            %tmp.141 = getm $.Toybox.WatchUi;
+            %tmp.142 = getv function ? %tmp.141 :Text;
+            %tmp.143 = newd 6;
+            %tmp.145 = const :identifier;
+            %tmp.146 = "zuluLabel";
+            %tmp.147 = dup %tmp.143;
+            %tmp.148 = aputv %tmp.147 %tmp.145 %tmp.146;
+            %tmp.150 = const :color;
+            %tmp.151 = getm $.Toybox.Graphics;
+            %tmp.152 = getv %tmp.151 :COLOR_LT_GRAY;
+            %tmp.153 = dup %tmp.148;
+            %tmp.154 = aputv %tmp.153 %tmp.150 %tmp.152;
+            %tmp.156 = const :locX;
+            %tmp.157 = 390;
+            %tmp.158 = 0.5;
+            %tmp.159 = mul %tmp.157 %tmp.158;
+            %tmp.160 = dup %tmp.154;
+            %tmp.161 = aputv %tmp.160 %tmp.156 %tmp.159;
+            %tmp.163 = const :locY;
+            %tmp.164 = 390;
+            %tmp.165 = 85;
+            %tmp.166 = 100.0;
+            %tmp.167 = div %tmp.165 %tmp.166;
+            %tmp.168 = mul %tmp.164 %tmp.167;
+            %tmp.169 = dup %tmp.161;
+            %tmp.170 = aputv %tmp.169 %tmp.163 %tmp.168;
+            %tmp.172 = const :justification;
+            %tmp.173 = getm $.Toybox.Graphics;
+            %tmp.174 = getv %tmp.173 :TEXT_JUSTIFY_CENTER;
+            %tmp.175 = dup %tmp.170;
+            %tmp.176 = aputv %tmp.175 %tmp.172 %tmp.174;
+            %tmp.178 = const :font;
+            %tmp.179 = getm $.Toybox.Graphics;
+            %tmp.180 = getv %tmp.179 :FONT_XTINY;
+            %tmp.181 = dup %tmp.176;
+            %tmp.182 = aputv %tmp.181 %tmp.178 %tmp.180;
+            %tmp.139 = newc %tmp.142 (%tmp.182);
+            lputv %rez_cmp_local_text_zuluLabel.5 %tmp.139;
+[ "/Users/jeffreyforste/Garmin Projects/AviationDualTime/bin/gen/006-B3740-00/source/Rez.mcgen" 30 12 ]
+            [ "_Users_jeffreyforste_Garmin_Projects_AviationDualTime_bin_gen_006_B3740_00_source_Rez_mcgen_19_73_start" "_Users_jeffreyforste_Garmin_Projects_AviationDualTime_bin_gen_006_B3740_00_source_Rez_mcgen_19_73_stop" ]
+            %rez_cmp_local_text_dateLabel.6 = local;
+            %tmp.185 = getm $.Toybox.WatchUi;
+            %tmp.186 = getv function ? %tmp.185 :Text;
+            %tmp.187 = newd 6;
+            %tmp.189 = const :identifier;
+            %tmp.190 = "dateLabel";
+            %tmp.191 = dup %tmp.187;
+            %tmp.192 = aputv %tmp.191 %tmp.189 %tmp.190;
+            %tmp.194 = const :color;
+            %tmp.195 = getm $.Toybox.Graphics;
+            %tmp.196 = getv %tmp.195 :COLOR_LT_GRAY;
+            %tmp.197 = dup %tmp.192;
+            %tmp.198 = aputv %tmp.197 %tmp.194 %tmp.196;
+            %tmp.200 = const :locX;
+            %tmp.201 = 390;
+            %tmp.202 = 0.5;
+            %tmp.203 = mul %tmp.201 %tmp.202;
+            %tmp.204 = dup %tmp.198;
+            %tmp.205 = aputv %tmp.204 %tmp.200 %tmp.203;
+            %tmp.207 = const :locY;
+            %tmp.208 = 390;
+            %tmp.209 = 57;
+            %tmp.210 = 100.0;
+            %tmp.211 = div %tmp.209 %tmp.210;
+            %tmp.212 = mul %tmp.208 %tmp.211;
+            %tmp.213 = dup %tmp.205;
+            %tmp.214 = aputv %tmp.213 %tmp.207 %tmp.212;
+            %tmp.216 = const :justification;
+            %tmp.217 = getm $.Toybox.Graphics;
+            %tmp.218 = getv %tmp.217 :TEXT_JUSTIFY_CENTER;
+            %tmp.219 = dup %tmp.214;
+            %tmp.220 = aputv %tmp.219 %tmp.216 %tmp.218;
+            %tmp.222 = const :font;
+            %tmp.223 = getm $.Toybox.Graphics;
+            %tmp.224 = getv %tmp.223 :FONT_MEDIUM;
+            %tmp.225 = dup %tmp.220;
+            %tmp.226 = aputv %tmp.225 %tmp.222 %tmp.224;
+            %tmp.183 = newc %tmp.186 (%tmp.226);
+            lputv %rez_cmp_local_text_dateLabel.6 %tmp.183;
+[ "/Users/jeffreyforste/Garmin Projects/AviationDualTime/bin/gen/006-B3740-00/source/Rez.mcgen" 32 12 ]
+            [ "_Users_jeffreyforste_Garmin_Projects_AviationDualTime_bin_gen_006_B3740_00_source_Rez_mcgen_19_73_start" "_Users_jeffreyforste_Garmin_Projects_AviationDualTime_bin_gen_006_B3740_00_source_Rez_mcgen_19_73_stop" ]
+            %rez_cmp_local_text_batLabel.7 = local;
+            %tmp.229 = getm $.Toybox.WatchUi;
+            %tmp.230 = getv function ? %tmp.229 :Text;
+            %tmp.231 = newd 6;
+            %tmp.233 = const :identifier;
+            %tmp.234 = "batLabel";
+            %tmp.235 = dup %tmp.231;
+            %tmp.236 = aputv %tmp.235 %tmp.233 %tmp.234;
+            %tmp.238 = const :color;
+            %tmp.239 = getm $.Toybox.Graphics;
+            %tmp.240 = getv %tmp.239 :COLOR_LT_GRAY;
+            %tmp.241 = dup %tmp.236;
+            %tmp.242 = aputv %tmp.241 %tmp.238 %tmp.240;
+            %tmp.244 = const :locX;
+            %tmp.245 = 390;
+            %tmp.246 = 0.5;
+            %tmp.247 = mul %tmp.245 %tmp.246;
+            %tmp.248 = dup %tmp.242;
+            %tmp.249 = aputv %tmp.248 %tmp.244 %tmp.247;
+            %tmp.251 = const :locY;
+            %tmp.252 = 390;
+            %tmp.253 = 10;
+            %tmp.254 = 100.0;
+            %tmp.255 = div %tmp.253 %tmp.254;
+            %tmp.256 = mul %tmp.252 %tmp.255;
+            %tmp.257 = dup %tmp.249;
+            %tmp.258 = aputv %tmp.257 %tmp.251 %tmp.256;
+            %tmp.260 = const :justification;
+            %tmp.261 = getm $.Toybox.Graphics;
+            %tmp.262 = getv %tmp.261 :TEXT_JUSTIFY_CENTER;
+            %tmp.263 = dup %tmp.258;
+            %tmp.264 = aputv %tmp.263 %tmp.260 %tmp.262;
+            %tmp.266 = const :font;
+            %tmp.267 = getm $.Toybox.Graphics;
+            %tmp.268 = getv %tmp.267 :FONT_TINY;
+            %tmp.269 = dup %tmp.264;
+            %tmp.270 = aputv %tmp.269 %tmp.266 %tmp.268;
+            %tmp.227 = newc %tmp.230 (%tmp.270);
+            lputv %rez_cmp_local_text_batLabel.7 %tmp.227;
+[ "/Users/jeffreyforste/Garmin Projects/AviationDualTime/bin/gen/006-B3740-00/source/Rez.mcgen" 34 12 ]
+            [ "_Users_jeffreyforste_Garmin_Projects_AviationDualTime_bin_gen_006_B3740_00_source_Rez_mcgen_19_73_start" "_Users_jeffreyforste_Garmin_Projects_AviationDualTime_bin_gen_006_B3740_00_source_Rez_mcgen_19_73_stop" ]
+            %rez_cmp_local_text_alarmLabel.8 = local;
+            %tmp.273 = getm $.Toybox.WatchUi;
+            %tmp.274 = getv function ? %tmp.273 :Text;
+            %tmp.275 = newd 6;
+            %tmp.277 = const :identifier;
+            %tmp.278 = "alarmLabel";
+            %tmp.279 = dup %tmp.275;
+            %tmp.280 = aputv %tmp.279 %tmp.277 %tmp.278;
+            %tmp.282 = const :color;
+            %tmp.283 = getm $.Toybox.Graphics;
+            %tmp.284 = getv %tmp.283 :COLOR_DK_GREEN;
+            %tmp.285 = dup %tmp.280;
+            %tmp.286 = aputv %tmp.285 %tmp.282 %tmp.284;
+            %tmp.288 = const :locX;
+            %tmp.289 = 390;
+            %tmp.290 = 30;
+            %tmp.291 = 100.0;
+            %tmp.292 = div %tmp.290 %tmp.291;
+            %tmp.293 = mul %tmp.289 %tmp.292;
+            %tmp.294 = dup %tmp.286;
+            %tmp.295 = aputv %tmp.294 %tmp.288 %tmp.293;
+            %tmp.297 = const :locY;
+            %tmp.298 = 390;
+            %tmp.299 = 10;
+            %tmp.300 = 100.0;
+            %tmp.301 = div %tmp.299 %tmp.300;
+            %tmp.302 = mul %tmp.298 %tmp.301;
+            %tmp.303 = dup %tmp.295;
+            %tmp.304 = aputv %tmp.303 %tmp.297 %tmp.302;
+            %tmp.306 = const :justification;
+            %tmp.307 = getm $.Toybox.Graphics;
+            %tmp.308 = getv %tmp.307 :TEXT_JUSTIFY_CENTER;
+            %tmp.309 = dup %tmp.304;
+            %tmp.310 = aputv %tmp.309 %tmp.306 %tmp.308;
+            %tmp.312 = const :font;
+            %tmp.313 = getm $.Toybox.Graphics;
+            %tmp.314 = getv %tmp.313 :FONT_TINY;
+            %tmp.315 = dup %tmp.310;
+            %tmp.316 = aputv %tmp.315 %tmp.312 %tmp.314;
+            %tmp.271 = newc %tmp.274 (%tmp.316);
+            lputv %rez_cmp_local_text_alarmLabel.8 %tmp.271;
+[ "/Users/jeffreyforste/Garmin Projects/AviationDualTime/bin/gen/006-B3740-00/source/Rez.mcgen" 36 12 ]
+            [ "_Users_jeffreyforste_Garmin_Projects_AviationDualTime_bin_gen_006_B3740_00_source_Rez_mcgen_19_73_start" "_Users_jeffreyforste_Garmin_Projects_AviationDualTime_bin_gen_006_B3740_00_source_Rez_mcgen_19_73_stop" ]
+            %rez_cmp_local_text_noteLabel.9 = local;
+            %tmp.319 = getm $.Toybox.WatchUi;
+            %tmp.320 = getv function ? %tmp.319 :Text;
+            %tmp.321 = newd 6;
+            %tmp.323 = const :identifier;
+            %tmp.324 = "noteLabel";
+            %tmp.325 = dup %tmp.321;
+            %tmp.326 = aputv %tmp.325 %tmp.323 %tmp.324;
+            %tmp.328 = const :color;
+            %tmp.329 = getm $.Toybox.Graphics;
+            %tmp.330 = getv %tmp.329 :COLOR_DK_GREEN;
+            %tmp.331 = dup %tmp.326;
+            %tmp.332 = aputv %tmp.331 %tmp.328 %tmp.330;
+            %tmp.334 = const :locX;
+            %tmp.335 = 390;
+            %tmp.336 = 70;
+            %tmp.337 = 100.0;
+            %tmp.338 = div %tmp.336 %tmp.337;
+            %tmp.339 = mul %tmp.335 %tmp.338;
+            %tmp.340 = dup %tmp.332;
+            %tmp.341 = aputv %tmp.340 %tmp.334 %tmp.339;
+            %tmp.343 = const :locY;
+            %tmp.344 = 390;
+            %tmp.345 = 10;
+            %tmp.346 = 100.0;
+            %tmp.347 = div %tmp.345 %tmp.346;
+            %tmp.348 = mul %tmp.344 %tmp.347;
+            %tmp.349 = dup %tmp.341;
+            %tmp.350 = aputv %tmp.349 %tmp.343 %tmp.348;
+            %tmp.352 = const :justification;
+            %tmp.353 = getm $.Toybox.Graphics;
+            %tmp.354 = getv %tmp.353 :TEXT_JUSTIFY_CENTER;
+            %tmp.355 = dup %tmp.350;
+            %tmp.356 = aputv %tmp.355 %tmp.352 %tmp.354;
+            %tmp.358 = const :font;
+            %tmp.359 = getm $.Toybox.Graphics;
+            %tmp.360 = getv %tmp.359 :FONT_TINY;
+            %tmp.361 = dup %tmp.356;
+            %tmp.362 = aputv %tmp.361 %tmp.358 %tmp.360;
+            %tmp.317 = newc %tmp.320 (%tmp.362);
+            lputv %rez_cmp_local_text_noteLabel.9 %tmp.317;
+[ "/Users/jeffreyforste/Garmin Projects/AviationDualTime/bin/gen/006-B3740-00/source/Rez.mcgen" 38 12 ]
+            [ "_Users_jeffreyforste_Garmin_Projects_AviationDualTime_bin_gen_006_B3740_00_source_Rez_mcgen_19_73_start" "_Users_jeffreyforste_Garmin_Projects_AviationDualTime_bin_gen_006_B3740_00_source_Rez_mcgen_19_73_stop" ]
+            %rez_cmp_local_text_stepLabel.10 = local;
+            %tmp.365 = getm $.Toybox.WatchUi;
+            %tmp.366 = getv function ? %tmp.365 :Text;
+            %tmp.367 = newd 6;
+            %tmp.369 = const :identifier;
+            %tmp.370 = "stepLabel";
+            %tmp.371 = dup %tmp.367;
+            %tmp.372 = aputv %tmp.371 %tmp.369 %tmp.370;
+            %tmp.374 = const :color;
+            %tmp.375 = getm $.Toybox.Graphics;
+            %tmp.376 = getv %tmp.375 :COLOR_LT_GRAY;
+            %tmp.377 = dup %tmp.372;
+            %tmp.378 = aputv %tmp.377 %tmp.374 %tmp.376;
+            %tmp.380 = const :locX;
+            %tmp.381 = 390;
+            %tmp.382 = 0.5;
+            %tmp.383 = mul %tmp.381 %tmp.382;
+            %tmp.384 = dup %tmp.378;
+            %tmp.385 = aputv %tmp.384 %tmp.380 %tmp.383;
+            %tmp.387 = const :locY;
+            %tmp.388 = 390;
+            %tmp.389 = 67;
+            %tmp.390 = 100.0;
+            %tmp.391 = div %tmp.389 %tmp.390;
+            %tmp.392 = mul %tmp.388 %tmp.391;
+            %tmp.393 = dup %tmp.385;
+            %tmp.394 = aputv %tmp.393 %tmp.387 %tmp.392;
+            %tmp.396 = const :justification;
+            %tmp.397 = getm $.Toybox.Graphics;
+            %tmp.398 = getv %tmp.397 :TEXT_JUSTIFY_CENTER;
+            %tmp.399 = dup %tmp.394;
+            %tmp.400 = aputv %tmp.399 %tmp.396 %tmp.398;
+            %tmp.402 = const :font;
+            %tmp.403 = getm $.Toybox.Graphics;
+            %tmp.404 = getv %tmp.403 :FONT_NUMBER_MEDIUM;
+            %tmp.405 = dup %tmp.400;
+            %tmp.406 = aputv %tmp.405 %tmp.402 %tmp.404;
+            %tmp.363 = newc %tmp.366 (%tmp.406);
+            lputv %rez_cmp_local_text_stepLabel.10 %tmp.363;
+[ "/Users/jeffreyforste/Garmin Projects/AviationDualTime/bin/gen/006-B3740-00/source/Rez.mcgen" 40 12 ]
+            %tmp.407 = newa Array<WatchUi.Drawable> 10;
+            %tmp.409 = lgetv %rez_cmp_local_custom_drawable_65580613402996281113.1;
+            %tmp.410 = dup %tmp.407;
+            %tmp.411 = aputv %tmp.410 0 %tmp.409;
+            %tmp.413 = lgetv %rez_cmp_local_text_TimeLabelRShad.2;
+            %tmp.414 = dup %tmp.411;
+            %tmp.415 = aputv %tmp.414 1 %tmp.413;
+            %tmp.417 = lgetv %rez_cmp_local_text_TimeLabel.3;
+            %tmp.418 = dup %tmp.415;
+            %tmp.419 = aputv %tmp.418 2 %tmp.417;
+            %tmp.421 = lgetv %rez_cmp_local_text_zTimeLabel.4;
+            %tmp.422 = dup %tmp.419;
+            %tmp.423 = aputv %tmp.422 3 %tmp.421;
+            %tmp.425 = lgetv %rez_cmp_local_text_zuluLabel.5;
+            %tmp.426 = dup %tmp.423;
+            %tmp.427 = aputv %tmp.426 4 %tmp.425;
+            %tmp.429 = lgetv %rez_cmp_local_text_dateLabel.6;
+            %tmp.430 = dup %tmp.427;
+            %tmp.431 = aputv %tmp.430 5 %tmp.429;
+            %tmp.433 = lgetv %rez_cmp_local_text_batLabel.7;
+            %tmp.434 = dup %tmp.431;
+            %tmp.435 = aputv %tmp.434 6 %tmp.433;
+            %tmp.437 = lgetv %rez_cmp_local_text_alarmLabel.8;
+            %tmp.438 = dup %tmp.435;
+            %tmp.439 = aputv %tmp.438 7 %tmp.437;
+            %tmp.441 = lgetv %rez_cmp_local_text_noteLabel.9;
+            %tmp.442 = dup %tmp.439;
+            %tmp.443 = aputv %tmp.442 8 %tmp.441;
+            %tmp.445 = lgetv %rez_cmp_local_text_stepLabel.10;
+            %tmp.446 = dup %tmp.443;
+            %tmp.447 = aputv %tmp.446 9 %tmp.445;
+            ret %tmp.447;
+_Users_jeffreyforste_Garmin_Projects_AviationDualTime_bin_gen_006_B3740_00_source_Rez_mcgen_19_73_stop:
+        }
+    }
+    [ @file = "/Users/jeffreyforste/Garmin Projects/AviationDualTime/bin/gen/006-B3740-00/source/Rez.mcgen"; @line = 44; ]
+    module Menus {
+        [ @file = "/Users/jeffreyforste/Garmin Projects/AviationDualTime/bin/gen/006-B3740-00/source/Rez.mcgen"; @line = 44; ]
+        <init> {
+        }
+    }
+    [ @file = "/Users/jeffreyforste/Garmin Projects/AviationDualTime/bin/gen/006-B3740-00/source/Rez.mcgen"; @line = 47; ]
+    module Strings {
+        [ @file = "/Users/jeffreyforste/Garmin Projects/AviationDualTime/bin/gen/006-B3740-00/source/Rez.mcgen"; @line = 47; ]
+        <init> {
+        }
+        [ @file = "/Users/jeffreyforste/Garmin Projects/AviationDualTime/bin/gen/006-B3740-00/source/Rez.mcgen"; @line = 48; @position = 27; initialized = true; ]
+        var Z18 as Symbol;
+        [ @file = "/Users/jeffreyforste/Garmin Projects/AviationDualTime/bin/gen/006-B3740-00/source/Rez.mcgen"; @line = 49; @position = 27; initialized = true; ]
+        var Z17 as Symbol;
+        [ @file = "/Users/jeffreyforste/Garmin Projects/AviationDualTime/bin/gen/006-B3740-00/source/Rez.mcgen"; @line = 50; @position = 27; initialized = true; ]
+        var Z19 as Symbol;
+        [ @file = "/Users/jeffreyforste/Garmin Projects/AviationDualTime/bin/gen/006-B3740-00/source/Rez.mcgen"; @line = 51; @position = 27; initialized = true; ]
+        var ZuluTitle as Symbol;
+        [ @file = "/Users/jeffreyforste/Garmin Projects/AviationDualTime/bin/gen/006-B3740-00/source/Rez.mcgen"; @line = 52; @position = 27; initialized = true; ]
+        var ZuluOffsetPrompt as Symbol;
+        [ @file = "/Users/jeffreyforste/Garmin Projects/AviationDualTime/bin/gen/006-B3740-00/source/Rez.mcgen"; @line = 53; @position = 27; initialized = true; ]
+        var NoBat as Symbol;
+        [ @file = "/Users/jeffreyforste/Garmin Projects/AviationDualTime/bin/gen/006-B3740-00/source/Rez.mcgen"; @line = 54; @position = 27; initialized = true; ]
+        var Black as Symbol;
+        [ @file = "/Users/jeffreyforste/Garmin Projects/AviationDualTime/bin/gen/006-B3740-00/source/Rez.mcgen"; @line = 55; @position = 27; initialized = true; ]
+        var GrayShad as Symbol;
+        [ @file = "/Users/jeffreyforste/Garmin Projects/AviationDualTime/bin/gen/006-B3740-00/source/Rez.mcgen"; @line = 56; @position = 27; initialized = true; ]
+        var Orange as Symbol;
+        [ @file = "/Users/jeffreyforste/Garmin Projects/AviationDualTime/bin/gen/006-B3740-00/source/Rez.mcgen"; @line = 57; @position = 27; initialized = true; ]
+        var ShadOptPrompt as Symbol;
+        [ @file = "/Users/jeffreyforste/Garmin Projects/AviationDualTime/bin/gen/006-B3740-00/source/Rez.mcgen"; @line = 58; @position = 27; initialized = true; ]
+        var ZuluOffsetTitle as Symbol;
+        [ @file = "/Users/jeffreyforste/Garmin Projects/AviationDualTime/bin/gen/006-B3740-00/source/Rez.mcgen"; @line = 59; @position = 27; initialized = true; ]
+        var batString as Symbol;
+        [ @file = "/Users/jeffreyforste/Garmin Projects/AviationDualTime/bin/gen/006-B3740-00/source/Rez.mcgen"; @line = 60; @position = 27; initialized = true; ]
+        var Z1 as Symbol;
+        [ @file = "/Users/jeffreyforste/Garmin Projects/AviationDualTime/bin/gen/006-B3740-00/source/Rez.mcgen"; @line = 61; @position = 27; initialized = true; ]
+        var Z2 as Symbol;
+        [ @file = "/Users/jeffreyforste/Garmin Projects/AviationDualTime/bin/gen/006-B3740-00/source/Rez.mcgen"; @line = 62; @position = 27; initialized = true; ]
+        var Z21 as Symbol;
+        [ @file = "/Users/jeffreyforste/Garmin Projects/AviationDualTime/bin/gen/006-B3740-00/source/Rez.mcgen"; @line = 63; @position = 27; initialized = true; ]
+        var ShadOpt as Symbol;
+        [ @file = "/Users/jeffreyforste/Garmin Projects/AviationDualTime/bin/gen/006-B3740-00/source/Rez.mcgen"; @line = 64; @position = 27; initialized = true; ]
+        var Z3 as Symbol;
+        [ @file = "/Users/jeffreyforste/Garmin Projects/AviationDualTime/bin/gen/006-B3740-00/source/Rez.mcgen"; @line = 65; @position = 27; initialized = true; ]
+        var Z20 as Symbol;
+        [ @file = "/Users/jeffreyforste/Garmin Projects/AviationDualTime/bin/gen/006-B3740-00/source/Rez.mcgen"; @line = 66; @position = 27; initialized = true; ]
+        var Z4 as Symbol;
+        [ @file = "/Users/jeffreyforste/Garmin Projects/AviationDualTime/bin/gen/006-B3740-00/source/Rez.mcgen"; @line = 67; @position = 27; initialized = true; ]
+        var Z23 as Symbol;
+        [ @file = "/Users/jeffreyforste/Garmin Projects/AviationDualTime/bin/gen/006-B3740-00/source/Rez.mcgen"; @line = 68; @position = 27; initialized = true; ]
+        var Z5 as Symbol;
+        [ @file = "/Users/jeffreyforste/Garmin Projects/AviationDualTime/bin/gen/006-B3740-00/source/Rez.mcgen"; @line = 69; @position = 27; initialized = true; ]
+        var Z22 as Symbol;
+        [ @file = "/Users/jeffreyforste/Garmin Projects/AviationDualTime/bin/gen/006-B3740-00/source/Rez.mcgen"; @line = 70; @position = 27; initialized = true; ]
+        var DispBattPrompt as Symbol;
+        [ @file = "/Users/jeffreyforste/Garmin Projects/AviationDualTime/bin/gen/006-B3740-00/source/Rez.mcgen"; @line = 71; @position = 27; initialized = true; ]
+        var Z6 as Symbol;
+        [ @file = "/Users/jeffreyforste/Garmin Projects/AviationDualTime/bin/gen/006-B3740-00/source/Rez.mcgen"; @line = 72; @position = 27; initialized = true; ]
+        var Z25 as Symbol;
+        [ @file = "/Users/jeffreyforste/Garmin Projects/AviationDualTime/bin/gen/006-B3740-00/source/Rez.mcgen"; @line = 73; @position = 27; initialized = true; ]
+        var Z7 as Symbol;
+        [ @file = "/Users/jeffreyforste/Garmin Projects/AviationDualTime/bin/gen/006-B3740-00/source/Rez.mcgen"; @line = 74; @position = 27; initialized = true; ]
+        var Z24 as Symbol;
+        [ @file = "/Users/jeffreyforste/Garmin Projects/AviationDualTime/bin/gen/006-B3740-00/source/Rez.mcgen"; @line = 75; @position = 27; initialized = true; ]
+        var Z8 as Symbol;
+        [ @file = "/Users/jeffreyforste/Garmin Projects/AviationDualTime/bin/gen/006-B3740-00/source/Rez.mcgen"; @line = 76; @position = 27; initialized = true; ]
+        var Z27 as Symbol;
+        [ @file = "/Users/jeffreyforste/Garmin Projects/AviationDualTime/bin/gen/006-B3740-00/source/Rez.mcgen"; @line = 77; @position = 27; initialized = true; ]
+        var Z9 as Symbol;
+        [ @file = "/Users/jeffreyforste/Garmin Projects/AviationDualTime/bin/gen/006-B3740-00/source/Rez.mcgen"; @line = 78; @position = 27; initialized = true; ]
+        var Z26 as Symbol;
+        [ @file = "/Users/jeffreyforste/Garmin Projects/AviationDualTime/bin/gen/006-B3740-00/source/Rez.mcgen"; @line = 79; @position = 27; initialized = true; ]
+        var Z29 as Symbol;
+        [ @file = "/Users/jeffreyforste/Garmin Projects/AviationDualTime/bin/gen/006-B3740-00/source/Rez.mcgen"; @line = 80; @position = 27; initialized = true; ]
+        var Z28 as Symbol;
+        [ @file = "/Users/jeffreyforste/Garmin Projects/AviationDualTime/bin/gen/006-B3740-00/source/Rez.mcgen"; @line = 81; @position = 27; initialized = true; ]
+        var ZSteps as Symbol;
+        [ @file = "/Users/jeffreyforste/Garmin Projects/AviationDualTime/bin/gen/006-B3740-00/source/Rez.mcgen"; @line = 82; @position = 27; initialized = true; ]
+        var Pink as Symbol;
+        [ @file = "/Users/jeffreyforste/Garmin Projects/AviationDualTime/bin/gen/006-B3740-00/source/Rez.mcgen"; @line = 83; @position = 27; initialized = true; ]
+        var WhiteShad as Symbol;
+        [ @file = "/Users/jeffreyforste/Garmin Projects/AviationDualTime/bin/gen/006-B3740-00/source/Rez.mcgen"; @line = 84; @position = 27; initialized = true; ]
+        var Yellow as Symbol;
+        [ @file = "/Users/jeffreyforste/Garmin Projects/AviationDualTime/bin/gen/006-B3740-00/source/Rez.mcgen"; @line = 85; @position = 27; initialized = true; ]
+        var Z30 as Symbol;
+        [ @file = "/Users/jeffreyforste/Garmin Projects/AviationDualTime/bin/gen/006-B3740-00/source/Rez.mcgen"; @line = 86; @position = 27; initialized = true; ]
+        var Z31 as Symbol;
+        [ @file = "/Users/jeffreyforste/Garmin Projects/AviationDualTime/bin/gen/006-B3740-00/source/Rez.mcgen"; @line = 87; @position = 27; initialized = true; ]
+        var ZuluOffset as Symbol;
+        [ @file = "/Users/jeffreyforste/Garmin Projects/AviationDualTime/bin/gen/006-B3740-00/source/Rez.mcgen"; @line = 88; @position = 27; initialized = true; ]
+        var SubColorTitle as Symbol;
+        [ @file = "/Users/jeffreyforste/Garmin Projects/AviationDualTime/bin/gen/006-B3740-00/source/Rez.mcgen"; @line = 89; @position = 27; initialized = true; ]
+        var BackgroundColorTitle as Symbol;
+        [ @file = "/Users/jeffreyforste/Garmin Projects/AviationDualTime/bin/gen/006-B3740-00/source/Rez.mcgen"; @line = 90; @position = 27; initialized = true; ]
+        var DKGray as Symbol;
+        [ @file = "/Users/jeffreyforste/Garmin Projects/AviationDualTime/bin/gen/006-B3740-00/source/Rez.mcgen"; @line = 91; @position = 27; initialized = true; ]
+        var DKBlue as Symbol;
+        [ @file = "/Users/jeffreyforste/Garmin Projects/AviationDualTime/bin/gen/006-B3740-00/source/Rez.mcgen"; @line = 92; @position = 27; initialized = true; ]
+        var TimeStepTitle as Symbol;
+        [ @file = "/Users/jeffreyforste/Garmin Projects/AviationDualTime/bin/gen/006-B3740-00/source/Rez.mcgen"; @line = 93; @position = 27; initialized = true; ]
+        var AppName as Symbol;
+        [ @file = "/Users/jeffreyforste/Garmin Projects/AviationDualTime/bin/gen/006-B3740-00/source/Rez.mcgen"; @line = 94; @position = 27; initialized = true; ]
+        var ClockColorPrompt as Symbol;
+        [ @file = "/Users/jeffreyforste/Garmin Projects/AviationDualTime/bin/gen/006-B3740-00/source/Rez.mcgen"; @line = 95; @position = 27; initialized = true; ]
+        var ShadOptTitle as Symbol;
+        [ @file = "/Users/jeffreyforste/Garmin Projects/AviationDualTime/bin/gen/006-B3740-00/source/Rez.mcgen"; @line = 96; @position = 27; initialized = true; ]
+        var ZTime as Symbol;
+        [ @file = "/Users/jeffreyforste/Garmin Projects/AviationDualTime/bin/gen/006-B3740-00/source/Rez.mcgen"; @line = 97; @position = 27; initialized = true; ]
+        var TimeStepPrompt as Symbol;
+        [ @file = "/Users/jeffreyforste/Garmin Projects/AviationDualTime/bin/gen/006-B3740-00/source/Rez.mcgen"; @line = 98; @position = 27; initialized = true; ]
+        var DispBattTitle as Symbol;
+        [ @file = "/Users/jeffreyforste/Garmin Projects/AviationDualTime/bin/gen/006-B3740-00/source/Rez.mcgen"; @line = 99; @position = 27; initialized = true; ]
+        var SubColorPrompt as Symbol;
+        [ @file = "/Users/jeffreyforste/Garmin Projects/AviationDualTime/bin/gen/006-B3740-00/source/Rez.mcgen"; @line = 100; @position = 27; initialized = true; ]
+        var NoShad as Symbol;
+        [ @file = "/Users/jeffreyforste/Garmin Projects/AviationDualTime/bin/gen/006-B3740-00/source/Rez.mcgen"; @line = 101; @position = 27; initialized = true; ]
+        var Blue as Symbol;
+        [ @file = "/Users/jeffreyforste/Garmin Projects/AviationDualTime/bin/gen/006-B3740-00/source/Rez.mcgen"; @line = 102; @position = 27; initialized = true; ]
+        var DKRed as Symbol;
+        [ @file = "/Users/jeffreyforste/Garmin Projects/AviationDualTime/bin/gen/006-B3740-00/source/Rez.mcgen"; @line = 103; @position = 27; initialized = true; ]
+        var ClockColorTitle as Symbol;
+        [ @file = "/Users/jeffreyforste/Garmin Projects/AviationDualTime/bin/gen/006-B3740-00/source/Rez.mcgen"; @line = 104; @position = 27; initialized = true; ]
+        var YesBat as Symbol;
+        [ @file = "/Users/jeffreyforste/Garmin Projects/AviationDualTime/bin/gen/006-B3740-00/source/Rez.mcgen"; @line = 105; @position = 27; initialized = true; ]
+        var BlackShad as Symbol;
+        [ @file = "/Users/jeffreyforste/Garmin Projects/AviationDualTime/bin/gen/006-B3740-00/source/Rez.mcgen"; @line = 106; @position = 27; initialized = true; ]
+        var Red as Symbol;
+        [ @file = "/Users/jeffreyforste/Garmin Projects/AviationDualTime/bin/gen/006-B3740-00/source/Rez.mcgen"; @line = 107; @position = 27; initialized = true; ]
+        var White as Symbol;
+        [ @file = "/Users/jeffreyforste/Garmin Projects/AviationDualTime/bin/gen/006-B3740-00/source/Rez.mcgen"; @line = 108; @position = 27; initialized = true; ]
+        var Purple as Symbol;
+        [ @file = "/Users/jeffreyforste/Garmin Projects/AviationDualTime/bin/gen/006-B3740-00/source/Rez.mcgen"; @line = 109; @position = 27; initialized = true; ]
+        var Z10 as Symbol;
+        [ @file = "/Users/jeffreyforste/Garmin Projects/AviationDualTime/bin/gen/006-B3740-00/source/Rez.mcgen"; @line = 110; @position = 27; initialized = true; ]
+        var LTGray as Symbol;
+        [ @file = "/Users/jeffreyforste/Garmin Projects/AviationDualTime/bin/gen/006-B3740-00/source/Rez.mcgen"; @line = 111; @position = 27; initialized = true; ]
+        var zuluLabel as Symbol;
+        [ @file = "/Users/jeffreyforste/Garmin Projects/AviationDualTime/bin/gen/006-B3740-00/source/Rez.mcgen"; @line = 112; @position = 27; initialized = true; ]
+        var Z12 as Symbol;
+        [ @file = "/Users/jeffreyforste/Garmin Projects/AviationDualTime/bin/gen/006-B3740-00/source/Rez.mcgen"; @line = 113; @position = 27; initialized = true; ]
+        var Z11 as Symbol;
+        [ @file = "/Users/jeffreyforste/Garmin Projects/AviationDualTime/bin/gen/006-B3740-00/source/Rez.mcgen"; @line = 114; @position = 27; initialized = true; ]
+        var Z14 as Symbol;
+        [ @file = "/Users/jeffreyforste/Garmin Projects/AviationDualTime/bin/gen/006-B3740-00/source/Rez.mcgen"; @line = 115; @position = 27; initialized = true; ]
+        var DKGreen as Symbol;
+        [ @file = "/Users/jeffreyforste/Garmin Projects/AviationDualTime/bin/gen/006-B3740-00/source/Rez.mcgen"; @line = 116; @position = 27; initialized = true; ]
+        var Z13 as Symbol;
+        [ @file = "/Users/jeffreyforste/Garmin Projects/AviationDualTime/bin/gen/006-B3740-00/source/Rez.mcgen"; @line = 117; @position = 27; initialized = true; ]
+        var Green as Symbol;
+        [ @file = "/Users/jeffreyforste/Garmin Projects/AviationDualTime/bin/gen/006-B3740-00/source/Rez.mcgen"; @line = 118; @position = 27; initialized = true; ]
+        var Z16 as Symbol;
+        [ @file = "/Users/jeffreyforste/Garmin Projects/AviationDualTime/bin/gen/006-B3740-00/source/Rez.mcgen"; @line = 119; @position = 27; initialized = true; ]
+        var Z15 as Symbol;
+    }
+}
+[ @file = "/Users/jeffreyforste/Garmin Projects/AviationDualTime/bin/gen/006-B3740-00/source/Rez.mcgen"; @line = 1; ]
+<init> {
+}
